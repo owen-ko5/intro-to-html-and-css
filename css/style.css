@@ -1,0 +1,197 @@
+/* Reset and Base Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: #111;
+	color: #fff;
+	line-height: 1.6;
+}
+
+a {
+	color: #ff4d4d;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+a:hover {
+	color: #fff;
+}
+
+/* Layout */
+main {
+	padding: 2rem;
+	max-width: 1200px;
+	margin: auto;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #1a1a1a;
+	padding: 1rem 2rem;
+	border-bottom: 3px solid #ff4d4d;
+}
+
+.page-title {
+	font-size: 2rem;
+	color: #39f300;
+	text-transform: uppercase;
+}
+
+nav a {
+	margin-left: 1rem;
+	color: #fff;
+	font-weight: 500;
+	position: relative;
+}
+
+nav a.active::after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #ff4d4d;
+}
+
+.Hero {
+	background: url('../assets/images/hero.jpg') center/cover no-repeat;
+	padding: 6rem 2rem;
+	text-align: center;
+	background-blend-mode: darken;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Hero h3 {
+	font-size: 1.5rem;
+	color: #ccc;
+	margin-bottom: 0.5rem;
+}
+
+.Hero h2 {
+	font-size: 3rem;
+	color: #fff;
+	margin-bottom: 1rem;
+}
+
+.Hero a {
+	background: #ff4d4d;
+	color: #fff;
+	padding: 0.75rem 1.5rem;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+section {
+	margin: 3rem 0;
+}
+
+section h3, section h4, section h2 {
+	color: #ff4d4d;
+	margin-bottom: 1rem;
+}
+
+section p {
+	margin-bottom: 1rem;
+	color: #ccc;
+}
+
+section a {
+	display: inline-block;
+	background: #ff4d4d;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	margin-top: 1rem;
+}
+
+img {
+	width: 100%;
+	border-radius: 10px;
+	margin-bottom: 1rem;
+}
+
+/* Experience Section */
+section > section > section {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+section > section > section > div {
+	background-color: #1a1a1a;
+	padding: 1rem;
+	border-radius: 8px;
+	flex: 1;
+	text-align: center;
+}
+
+.fa-solid {
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+	color: #ff4d4d;
+}
+
+/* Timetable */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	background: #1a1a1a;
+	margin-top: 1rem;
+}
+
+table th,
+table td {
+	padding: 1rem;
+	text-align: center;
+	border: 1px solid #333;
+}
+
+table th {
+	background: #222;
+	color: #fff;
+}
+
+table td {
+	color: #ccc;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+ul li {
+	background: #222;
+	padding: 0.5rem 1rem;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+ul li:hover {
+	background: #ff4d4d;
+	color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	nav {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	section > section > section {
+		flex-direction: column;
+	}
+}
